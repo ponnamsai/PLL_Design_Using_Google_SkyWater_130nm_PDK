@@ -10,3 +10,19 @@ A clock signal can be generated with the help of a Quartz crystal or using a VCO
 
 Below is the description of each circuit present inside the PLL
 # Phase Frequency Detector (PFD)
+The basic functionality of this circuit is to compare the input reference and feedback signals and generate Up and Down signals depending on whether feedback signal leads or lags compared to reference signal.
+
+Below is the circuit of PFD 
+#############################
+
+Depending on the Up and Down values, we have the following state diagram
+#############################
+
+But there is an issue in the above circuit. When the phase difference between reference signal and feedback signal is very small, the PFD circuit does not detect as Up/Down signals are not given enough time to toggle completely. This condition is called Dead Zone and in order to avoid this, a more precise and sensitive PFD circuit should be designed.
+
+# Charge pump (CP)
+The output of the PFD is fed to Charge Pump. This coverts the digital input to a analog signal which is used by Voltage Controlled Oscillator(VCO) circuit. Charge Pump can ge designed using current steering circuits.
+
+Below is the circuit diagram of a Charge Pump
+
+################################
