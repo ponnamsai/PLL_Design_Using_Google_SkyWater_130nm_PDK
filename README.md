@@ -121,6 +121,68 @@ Design Flow Followed for this project
    When we zoom in waveform, it looks as below
    
    ![Screenshot (13)](https://user-images.githubusercontent.com/18748519/133964085-b20c8819-a454-4e0a-9cf8-e2ba83c89795.png)
+   
+   We can observe that output voltage across the capacitor increased exponentially with small ups and downs which is because of Up and Down signals. As Average time of Up being 1 is more than Down being 1, voltage increased.
+   
+3) Voltage Controlled Oscillator (VCO) :
+
+    Below are the simulation results for VCO circuit
+    
+    ![Screenshot (47)](https://user-images.githubusercontent.com/18748519/133964532-e1cc89b5-993b-4fc6-8913-c92f9c4eb19c.png)
+    
+    When we zoom in waveform, it looks as below
+    
+    ![Screenshot (21)](https://user-images.githubusercontent.com/18748519/133964590-72957431-c054-46f7-9e6c-45e8b903334d.png)
+    
+    We can observe that oscillations are with full swing and this is because of an extra inverter that is added at the output.
+    
+ 
+4) Frequency Divider Circuit (FD) :
+
+   Below are the simulation results for FD circuit
+    
+   ![Screenshot (18)](https://user-images.githubusercontent.com/18748519/133964873-36a0ecf1-0bdf-402a-848c-dc8e1c33e0a2.png)
+   
+   When we zoom in waveform, it looks as below
+   
+   ![Screenshot (48)](https://user-images.githubusercontent.com/18748519/133965039-9b013889-1faf-4a33-adcf-fa4d85499d1b.png)
+   
+   We can observe that the output signal's frequency is exactly of the frequency of the input signal
+   
+ 
+ As individual circuits are working as expected, we create the entire PLL circuit joining all these components using subcircuit block.
+
+5) Phase Locked Loop (PLL) :
+
+   Below are the simulation results for PLL circuit
+   
+   ![Screenshot (46)](https://user-images.githubusercontent.com/18748519/133965595-05d00eda-aa17-40c4-9f76-5acb38ebe7df.png)
+   
+   
+   When we zoom in waveform, it looks as below
+   
+   ![Screenshot (47)](https://user-images.githubusercontent.com/18748519/133965675-b7577b1e-e415-4c57-aac9-8ad52cd9a847.png)
+
+   ![Screenshot (45)](https://user-images.githubusercontent.com/18748519/133965727-e7aa06f4-1228-4f68-affb-9de490d89b05.png)
+
+   We can observe that reference signal and feedback signal are mimicing each other. In an ideal case, both signals should overlap without any phase noise. We can also observe signals with frequency X8, X4, X2 which can also be used as frequency multiplier.
+   
+# Layout Development:
+  
+  Layouts for the above working circuits are developed individually and then connected to form entire PLL circuit.
+  
+  1) PFD Circuit: 
+     
+     ![Screenshot (49)](https://user-images.githubusercontent.com/18748519/133968603-29768479-c428-4a58-815e-f82779cffcb7.png)
+     
+     
+    Area of the layout can be find using box command in the terminal
+     
+     ![Screenshot (23)](https://user-images.githubusercontent.com/18748519/133968975-eeef78d1-e395-4e70-b01f-b8f15ee079fe.png)
+
+
+
+
 
 
 
