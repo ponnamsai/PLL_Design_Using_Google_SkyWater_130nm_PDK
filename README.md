@@ -38,3 +38,28 @@ But there can be leakage current even if both Up and Down are 0.This leakage cur
 ########################
 
 Charge Pump Circuit with LPF at the output
+
+#########################
+
+LPF not only helps in limiting high frequency fluctuations but also maintains the stability of the entire PLL control system as we are adding a Pole to the system.
+ 
+Thumb rules that are to be followed while selecting the component values
+1) Output Capacitance = Capacitance of LPF/10
+2) Loop Filter Bandwidth ~= (Highest output Frequency)/10 
+Loop filter Bandwidth is 1/(1+RC1) where C1 = (C*Cx)/C+Cx
+
+# Voltage Controlled Oscillator (VCO) 
+The functionality of this circuit is to generate a signal with a frequency that varies depending on the voltage of the input signal. It can be implemented using a Ring Oscillator which is a circuit with odd number of inverters with a specific delay connected in a series fashion. This makes the output signal to toggle after a certain amount of delay.
+
+###########################################
+
+Example Circuit of a VCO
+
+  Time Period of the signal generated = 2*(Delay of each inverter)*(number of inverters)
+  
+  Frequency depends on the time period which inturn depends on the delay and which inturn depends on the current supplied. If a large current is supplied at the output, the output gets charged faster. Current starving mechanism can be used to obtain variable frequencies. The important design criteria that should be noted while designing this circuit is that the frequencies that VCO generates must be in the same range of frequencies that the PLL supports.
+  
+  # Frequency Divider Circuit (FD):
+  A frequency divider circuit generates an output signal with a frequency reduced by a certain factor compared to the input signal.
+  
+  For example, if a signal with frequency F is given to a frequency divided by 2 circuit, it generates an output signal with frequency F/2.
