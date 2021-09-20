@@ -87,13 +87,22 @@ Example Circuit of a VCO
 
 Tools Used: ngspice and magic
 
-#######################################
-Individual Circuits used for this PLL
+# Individual Circuits used for this PLL
 
-Design Flow Followed for this project
+![Screenshot (7)](https://user-images.githubusercontent.com/18748519/133987960-36185f2b-365a-4e19-94b8-bde71402d701.png)
+
+![Screenshot (5)](https://user-images.githubusercontent.com/18748519/133987785-d72c7014-15f3-43d6-bd83-2301bae3ac97.png)
+
+![Screenshot (8)](https://user-images.githubusercontent.com/18748519/133988039-52bcd016-e487-44e9-be19-2012c310840b.png)
+
+![Screenshot (6)](https://user-images.githubusercontent.com/18748519/133987897-1e0e03ee-7612-4888-bee8-4d6461095834.png)
+
+
+# Design Flow Followed for this project
 
 ![Design Flow](https://user-images.githubusercontent.com/18748519/133962158-9ecdf238-7bb6-49da-8f91-5da65ac9ac30.jpg)
-# Pre-Layout Simulations:
+
+# Circuits Design and Pre-Layout Simulations:
 
 1) Phase Frequency Detector(PFD): 
   
@@ -224,6 +233,26 @@ Paracitics are extracted from the layout of each of the files (.mag). The .ext f
    
    ![Screenshot (39)](https://user-images.githubusercontent.com/18748519/133980871-988a2dae-488e-4484-8783-998d44d535e9.png)
    
+  Simulation Illustrating Dead-Zone: 
+  
+   When delay is changed from 10ns to 0.25ns as done in below code, we observe this condition. 
+   
+   ![Screenshot (47)](https://user-images.githubusercontent.com/18748519/133988990-4652de61-4ae3-4d55-9576-2b0c1c8bcb5c.png)
+   
+   Below is the Post-Layout simulation of PFD circuit with Dead-Zone situation:
+   
+   ![Screenshot (48)](https://user-images.githubusercontent.com/18748519/133989115-99790356-a8b0-40b2-afc5-8f6bf750dd61.png)
+   
+   When we zoom in waveform, it looks as below
+    
+   ![Screenshot (49)](https://user-images.githubusercontent.com/18748519/133989175-3b1c05cc-ad96-4998-a315-2599a8be2957.png)
+   
+   
+   We can observe that as there is very less phase difference between reference and feedback signal, Up signal is unable to toggle completely.
+
+ 
+   
+   
    
 2) CP:
    
@@ -263,13 +292,14 @@ Before tapeout, there can be some additional requirements that are to be catered
        
        4) Some Mechanisms to test (Example: BIST circuits)
        
-       Making sure that the design meets the above expectations is not only difficult but tiresome. These expectations can be met using Caravel SoC.
        
-       Below is the diagram of Caravel SoC
+Making sure that the design meets the above expectations is not only difficult but tiresome. These expectations can be met using Caravel SoC.
+       
+Below is the diagram of Caravel SoC
        
    ![CaravelSoCTemplate](https://user-images.githubusercontent.com/18748519/133986523-50c620c4-6d3f-4df6-b2d5-0b3c1b835c2a.jpg)
    
-   We need to place our design in the User's project area as shown in the figure and make nencessary connections. The entire SoC along with our design is verified and then fabricated.
+   We need to place our design in the Mega project area as shown in the figure and make nencessary connections. The entire SoC along with our design is verified and then fabricated.
    
 # References:
 1) https://github.com/lakshmi-sathi/avsdpll_1v8
