@@ -63,3 +63,69 @@ Example Circuit of a VCO
   A frequency divider circuit generates an output signal with a frequency reduced by a certain factor compared to the input signal.
   
   For example, if a signal with frequency F is given to a frequency divided by 2 circuit, it generates an output signal with frequency F/2.
+  
+  ##################################
+  Frequency divider by 2 circuit
+  
+  The cascaded Frequency divider by 2 circuit can be used to get frequency divided by a certain factor (multiple of 2) circuit. This circuit is optional in case of PLL.
+  # PLL Jargon:
+  1) Lock range: It is the range of frequencies for which PLL will maintain its locked state given that it is already in locked state.
+  
+  2) Capture Range: It is the range of frequencies for which PLL comes to locked state from unlocked state. Generally this rage is less than Lock range.
+  
+  3) Settling Time: It is the time taken by the PLL to attain a lock from the initial unlocked state.
+# PLL Circuit Design:
+8x multiplier PLL specifications used for this workshop
+1) TT - Corner (Typical Typical)
+2) VDD (Digital Supply) - 1.8V
+3) Temperature - Room Temeperature (27C)
+4) Both VCO and PLL Modes
+5) Reference Clock Frequency - 5MHz to 12.5MHz
+6) Output Clock Frequency    - 40MHz to 100MHz
+7) Jitter (RMS) <~20ns
+8) Duty Cycle -50%
+
+Tools Used: ngspice and magic
+
+#######################################
+Individual Circuits used for this PLL
+
+Design Flow Followed for this project
+
+![Design Flow](https://user-images.githubusercontent.com/18748519/133962158-9ecdf238-7bb6-49da-8f91-5da65ac9ac30.jpg)
+# Pre-Layout Simulations:
+
+1) Phase Frequency Detector(PFD): 
+  
+  Below are the simulation results for PFD circuit
+  
+  ![Screenshot (15)](https://user-images.githubusercontent.com/18748519/133963093-3d0146a7-6a8e-4180-8ffd-d09d3fb94286.png)
+  
+  
+  
+  When we zoom in waveform, it looks as below
+  
+  ![Screenshot (43)](https://user-images.githubusercontent.com/18748519/133963391-3f4faded-8f07-444a-b7fc-cd8e9979be58.png)
+  
+  ![Screenshot (44)](https://user-images.githubusercontent.com/18748519/133963578-7abea961-21d9-4547-95ee-e25ec7c4fc74.png)
+  
+  We can observe that Down signal toggled detecting the phase difference between input reference signal and feedback signal.
+  
+2) Charge Pump (CP): 
+
+   Below are the simulation results for CP circuit
+   
+   ![Screenshot (46)](https://user-images.githubusercontent.com/18748519/133963979-cb444841-acab-4200-b974-eda404737de5.png)
+   
+   
+   When we zoom in waveform, it looks as below
+   
+   ![Screenshot (13)](https://user-images.githubusercontent.com/18748519/133964085-b20c8819-a454-4e0a-9cf8-e2ba83c89795.png)
+
+
+
+
+
+
+
+
