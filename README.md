@@ -178,7 +178,85 @@ Design Flow Followed for this project
      
     Area of the layout can be find using box command in the terminal
      
-     ![Screenshot (23)](https://user-images.githubusercontent.com/18748519/133968975-eeef78d1-e395-4e70-b01f-b8f15ee079fe.png)
+   ![Screenshot (23)](https://user-images.githubusercontent.com/18748519/133968975-eeef78d1-e395-4e70-b01f-b8f15ee079fe.png)
+     
+     Area is 49.09 µm2
+     
+  2) CP Circuit:
+     
+     ![Screenshot (27)](https://user-images.githubusercontent.com/18748519/133969434-f496c22d-bbf8-4d4c-8a98-c7fee2647e3b.png)
+    
+    Area is 132.29 µm2
+    
+  3) VCO Cirucit: 
+     
+     ![Screenshot (28)](https://user-images.githubusercontent.com/18748519/133969707-3afb764a-d68c-440d-9b80-1a0156bbd6ee.png)
+     
+     Area is 57.73 µm2
+  
+  4) FD Circuit: 
+     
+     ![Screenshot (32)](https://user-images.githubusercontent.com/18748519/133969862-9a6c7688-d6b8-4954-b4a9-d0365e449ca7.png)
+     
+     Area is 29.92 µm2
+     
+  5) PLL Circuit: 
+  
+      By placing all instances and connecting all the blocks, below PLL is designed.
+      
+      ![Screenshot (33)](https://user-images.githubusercontent.com/18748519/133976241-ae430eaf-23e9-45b4-9d33-6a36f239f43a.png)
+      
+      ![Screenshot (36)](https://user-images.githubusercontent.com/18748519/133976342-66ed829b-ca61-436c-b6d1-87bb94d3c7e4.png)
+
+      Area is 496.03 µm2
+
+# Post Layout Simulations:
+
+Paracitics are extracted from the layout of each of the files (.mag). The .ext files are then converted into .spice file which then used for post_layout simulations. Post_layout simulations are carried with a 10ns delay.
+
+1) PFD: 
+   
+   Below is the Post-Layout simulation of PFD circuit
+   
+   ![Screenshot (38)](https://user-images.githubusercontent.com/18748519/133980687-6a37a8b4-4b0b-48d3-9b13-1b675e88f5f6.png)
+   
+   When we zoom in waveform, it looks as below
+   
+   ![Screenshot (39)](https://user-images.githubusercontent.com/18748519/133980871-988a2dae-488e-4484-8783-998d44d535e9.png)
+   
+   
+2) CP:
+   
+   Below is the Post-Layout simulation of CP circuit
+  
+   ![Screenshot (40)](https://user-images.githubusercontent.com/18748519/133980981-11b88354-e262-4131-8895-8addff2c45aa.png)
+   
+
+3) VCO: 
+   
+   Below is the Post-Layout simulation of VCO circuit
+   
+   ![Screenshot (41)](https://user-images.githubusercontent.com/18748519/133981074-ef6e75d0-e296-4f02-89b7-9c6701d787fa.png)
+   
+  
+ PLL Post_Layout Simulation: 
+ 
+  Below is the Post-Layout simulation of PLL circuit
+ 
+  ![Screenshot (51)](https://user-images.githubusercontent.com/18748519/133981455-41dc32c5-9bad-438b-a5b2-24bc03d77a8a.png)
+    
+  When we zoom in waveform, it looks as below
+    
+  ![Screenshot (52)](https://user-images.githubusercontent.com/18748519/133981548-02c24334-c2fa-4801-b0c4-456ab59abaa7.png)
+    
+  ![Screenshot (53)](https://user-images.githubusercontent.com/18748519/133981591-2209edbb-b4c0-4ac1-a229-c14e847f1be9.png)
+
+
+
+
+
+
+    
 
 
 
