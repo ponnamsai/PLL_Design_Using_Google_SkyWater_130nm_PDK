@@ -252,6 +252,32 @@ Paracitics are extracted from the layout of each of the files (.mag). The .ext f
   ![Screenshot (53)](https://user-images.githubusercontent.com/18748519/133981591-2209edbb-b4c0-4ac1-a229-c14e847f1be9.png)
 
 
+# Tapeout:
+Before tapeout, there can be some additional requirements that are to be catered so that the PLL or any other circuit can be accessed/used without any drawbacks. Some of them are :
+       
+       1) I/O Pads --> To connect to external world
+       
+       2) Peripherals
+       
+       3) Memory
+       
+       4) Some Mechanisms to test (Example: BIST circuits)
+       
+       Making sure that the design meets the above expectations is not only difficult but tiresome. These expectations can be met using Caravel SoC.
+       
+       Below is the diagram of Caravel SoC
+       
+   ![CaravelSoCTemplate](https://user-images.githubusercontent.com/18748519/133986523-50c620c4-6d3f-4df6-b2d5-0b3c1b835c2a.jpg)
+   
+   We need to place our design in the User's project area as shown in the figure and make nencessary connections. The entire SoC along with our design is verified and then fabricated.
+   
+# References:
+1) https://github.com/lakshmi-sathi/avsdpll_1v8
+2) https://freevideolectures.com/course/3101/rf-integrated-circuits/31
+3) http://opencircuitdesign.com/
+4) https://github.com/RTimothyEdwards/open_pdks
+
+
 
 
 
